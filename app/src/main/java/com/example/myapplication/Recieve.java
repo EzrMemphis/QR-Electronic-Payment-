@@ -24,6 +24,7 @@ public class Recieve extends AppCompatActivity {
     private LinearLayout qrcgen;
     QRGEncoder qrgEncoder;
     Bitmap bitmap;
+    String accountDetails = "#61j4ftra77s42";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public class Recieve extends AppCompatActivity {
                     int height=point.y;
                     int smallerdimension=width<height ? width:height;
                     smallerdimension=smallerdimension*3/4;
-                    qrgEncoder=new QRGEncoder(inputvalue,null,QRGContents.Type.TEXT,smallerdimension);
+                    qrgEncoder=new QRGEncoder(inputvalue+accountDetails,null,QRGContents.Type.TEXT,smallerdimension);
                     bitmap = qrgEncoder.getBitmap();
                     qrimg.setImageBitmap(bitmap);
                 }else{

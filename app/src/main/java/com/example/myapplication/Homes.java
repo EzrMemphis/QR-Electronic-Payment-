@@ -22,7 +22,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Homes extends AppCompatActivity {
 
-    private CardView accountLayout;
     private LinearLayout receiveLayout;
     private LinearLayout sendLayout;
     private CardView tn001;
@@ -42,9 +41,6 @@ public class Homes extends AppCompatActivity {
         balance = findViewById(R.id.balance);
         balance.setText("0.00");
 
-        accountLayout = findViewById(R.id.accountlayout);
-
-        accountLayout.setClickable(true);
 
         myDialog = new Dialog(this);
         receiveLayout = findViewById(R.id.receiveLayout);
@@ -71,13 +67,7 @@ public class Homes extends AppCompatActivity {
 
 
 
-        accountLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Homes.this, Account.class);
-                startActivity(i);
-            }
-        });
+
 
 
         receiveLayout.setOnClickListener(new View.OnClickListener() {

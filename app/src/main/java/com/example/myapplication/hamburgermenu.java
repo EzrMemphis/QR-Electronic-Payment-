@@ -17,6 +17,7 @@ public class hamburgermenu extends AppCompatActivity {
 
     ImageButton backtohome;
     CardView AcceptDonations;
+    private CardView accountLayout;
     CardView Logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,9 @@ public class hamburgermenu extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        accountLayout.setClickable(true);
+        accountLayout = findViewById(R.id.accountlayout);
 
         backtohome = findViewById(R.id.backtohome);
         AcceptDonations = findViewById(R.id.acceptdonations);
@@ -43,6 +47,14 @@ public class hamburgermenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(hamburgermenu.this, staticQR.class);
+                startActivity(i);
+            }
+        });
+
+        accountLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(hamburgermenu.this, Account.class);
                 startActivity(i);
             }
         });

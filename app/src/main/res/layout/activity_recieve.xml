@@ -27,6 +27,7 @@
             android:layout_below="@id/qrc"
             android:gravity="center"
             android:id="@+id/edittext"
+            android:inputType="numberDecimal"
             />
 
         <androidx.cardview.widget.CardView
